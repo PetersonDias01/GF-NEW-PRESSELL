@@ -1,4 +1,21 @@
-ame situation, but things have improved a lot since I found a natural approach that helped stabilize my blood sugar levels.",
+new Vue({
+  el: "#app",
+  data: {
+    tempoEmSegundos: 5, // Delay time in seconds
+    min: 600, // Minimum number of people in the live
+    max: 1000, // Maximum number of people in the live
+
+    // Here we define the comments, with image, name, and text
+    comentarios: [
+      {
+        img: "./assets/img/1.webp",
+        nome: "Lia",
+        texto: "I have been struggling with diabetes for years. I really need help. Does anyone have any suggestions?",
+      },
+      {
+        img: "./assets/img/2.webp",
+        nome: "Herbert",
+        texto: "I know how tough it can be. I was in the same situation, but things have improved a lot since I found a natural approach that helped stabilize my blood sugar levels.",
       },
       {
         img: "./assets/img/3.webp",
