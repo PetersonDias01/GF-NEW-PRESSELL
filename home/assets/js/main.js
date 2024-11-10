@@ -1,119 +1,131 @@
 new Vue({
   el: "#app",
   data: {
-    tempoEmSegundos: 5, // Delay time in seconds
-    min: 600, // Minimum number of people in the live
-    max: 1000, // Maximum number of people in the live
+    tempoEmSegundos: 5, //Tempo em segundos do delay
+    min: 600, // valor mÃ­nimo de pessoas na live
+    max: 1000, // mÃ¡ximo de pessoas na live
 
-    // Here we define the comments, with image, name, and text
+    //aqui definimos os comentarios, com imagem,nome e texto
     comentarios: [
       {
         img: "./assets/img/1.webp",
         nome: "Lia",
-        texto: "I have been struggling with diabetes for years. I really need help. Does anyone have any suggestions?",
+        texto: "Peterson é lindo.",
       },
       {
         img: "./assets/img/2.webp",
         nome: "Herbert",
-        texto: "I know how tough it can be. I was in the same situation, but things have improved a lot since I found a natural approach that helped stabilize my blood sugar levels.",
+        texto:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       },
       {
         img: "./assets/img/3.webp",
         nome: "Raul",
-        texto: "I felt hopeless with my diabetes until I found this method that really worked for me. Stay positive, there is a way out!",
+        texto:
+          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       },
       {
         img: "./assets/img/4.webp",
         nome: "Maria R.",
-        texto: "If you're struggling, just know that you're not alone. I used to be in the same situation and finally found a way to control it naturally.",
+        texto:
+          " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
       },
       {
         img: "./assets/img/5.webp",
         nome: "Selenna",
-        texto: "Diabetes was ruining my life, but after making a few changes and trying some new things, my life is so much better now!",
+        texto: " It has survived not only five centurie.",
       },
       {
         img: "./assets/img/6.webp",
         nome: "Ester R",
-        texto: "I can't believe how much better I feel now. I wish I had known about this sooner. Keep believing, it's possible to improve!",
+        texto:
+          " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       },
       {
         img: "./assets/img/7.webp",
         nome: "Love2",
-        texto: "My friend recommended something that completely changed my diabetes management. Never lose hope!",
+        texto:
+          "he release of Letraset sheets containing Lorem Ipsum passages, and more recently  ",
       },
       {
         img: "./assets/img/8.webp",
         nome: "Brunno",
-        texto: "For anyone still struggling: I used to feel helpless too, but I found a solution that made a difference. Don't give up!",
+        texto:
+          "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       },
       {
         img: "./assets/img/9.webp",
         nome: "Leo",
-        texto: "It took time, but I finally managed to get my blood sugar levels under control. There is a way through this!",
+        texto: "Finibus Bonorum et Malorum",
       },
       {
         img: "./assets/img/10.webp",
         nome: "Cleo M.",
-        texto: "I thought diabetes would always control my life, but I found the help I needed. There is hope!",
+        texto: "Lorem ipsum dolor sit amet...",
       },
       {
         img: "./assets/img/11.webp",
         nome: "Lady L.",
-        texto: "I used to think nothing could help, but after hearing about a natural approach, my life changed for the better.",
+        texto:
+          "combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.",
       },
       {
         img: "./assets/img/12.webp",
         nome: "The Weed",
-        texto: "Trust me, there are ways to manage this. I found something that worked for me and it can work for you too.",
+        texto:
+          "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       },
       {
         img: "./assets/img/13.webp",
         nome: "Michael",
-        texto: "I want to share hope with anyone struggling. I found a solution that made a huge difference in my life.",
+        texto: "Sections 1.10.32 and 1.10.33 from ",
       },
       {
         img: "./assets/img/14.webp",
         nome: "Roque",
-        texto: "I thought I had tried everything, but there's always something new to learn. Finding the right approach made all the difference for me.",
+        texto: "The standard Lorem Ipsum passage, used since the 1500s",
       },
       {
         img: "./assets/img/15.webp",
         nome: "Thiago",
-        texto: "Don't be discouraged. I was lost too until I came across this new approach. Now, I feel so much better.",
+        texto: "Section 1.10.32 of",
       },
       {
         img: "./assets/img/16.webp",
         nome: "Rodrygo ",
-        texto: "To anyone feeling overwhelmed: I found something that worked for me, and I believe you can too. Keep pushing through!",
+        texto:
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       },
       {
         img: "./assets/img/17.webp",
         nome: "DJ Trash",
-        texto: "Managing diabetes is tough, but not impossible. I found a way, and so can you.",
+        texto:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       },
       {
         img: "./assets/img/18.webp",
         nome: "Alone",
-        texto: "I know the pain of feeling stuck with diabetes. Finding the right help was a game-changer for me.",
+        texto:
+          "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects",
       },
       {
         img: "./assets/img/19.webp",
         nome: "Mixely",
-        texto: "There are people out here who understand. I found support, and you can too.",
+        texto:
+          " give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects",
       },
       {
         img: "./assets/img/20.webp",
         nome: "Pale Man",
-        texto: "Diabetes doesn't have to control you forever. There's always hope for change.",
+        texto: "Opa!",
       },
     ],
 
-    btnDisplay: "none", // Don't change
-    contador: 730, // Don't change
-    comentariosExibidos: [], // Don't change
-    indiceComentario: 0, // Don't change
-    showContent: true, // Don't change
+    btnDisplay: "none", //nÃ£o mexe
+    contador: 730, //nÃ£o mexe
+    comentariosExibidos: [], //nÃ£o mexe
+    indiceComentario: 0, //nÃ£o mex
+    showContent: true, //nÃ£o mex
   },
   mounted() {
     this.exibirComentario();
