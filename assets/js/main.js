@@ -10,7 +10,7 @@ new Vue({
       {
         img: "./assets/img/1.webp",
         nome: "Lia",
-        texto: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+        texto: "Peterson Dias.",
       },
       {
         img: "./assets/img/2.webp",
