@@ -1,131 +1,119 @@
 new Vue({
   el: "#app",
   data: {
-    tempoEmSegundos: 5, //Tempo em segundos do delay
-    min: 600, // valor mÃ­nimo de pessoas na live
-    max: 1000, // mÃ¡ximo de pessoas na live
+    tempoEmSegundos: 5, // Delay time in seconds
+    min: 600, // Minimum number of people in the live
+    max: 1000, // Maximum number of people in the live
 
-    //aqui definimos os comentarios, com imagem,nome e texto
+    // Here we define the comments, with image, name, and text
     comentarios: [
       {
         img: "./assets/img/1.webp",
         nome: "Lia",
-        texto: "Peterson é lindo.",
+        texto: "I have been struggling with diabetes for years. I really need help. But seeing this video gives me hope that I might finally find the solution I've been looking for.",
       },
       {
         img: "./assets/img/2.webp",
         nome: "Herbert",
-        texto:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        texto: "I know how tough it can be. I was in the same situation, feeling hopeless, but this approach truly helped me stabilize my blood sugar levels. I wish I had found it sooner!",
       },
       {
         img: "./assets/img/3.webp",
         nome: "Raul",
-        texto:
-          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        texto: "I felt hopeless with my diabetes, always tired and frustrated, until I found this method. It really worked for me. I think this video might help many others too. Stay positive!",
       },
       {
         img: "./assets/img/4.webp",
         nome: "Maria R.",
-        texto:
-          " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+        texto: "If you're struggling, just know that you're not alone. I was in the same place, feeling like there was no way out, but finally found a natural way to control it. This could be the turning point for you too!",
       },
       {
         img: "./assets/img/5.webp",
         nome: "Selenna",
-        texto: " It has survived not only five centurie.",
+        texto: "Diabetes was ruining my life. I felt defeated. But after making a few changes and finding some new methods, my life improved significantly. I feel like this video can really make a difference.",
       },
       {
         img: "./assets/img/6.webp",
         nome: "Ester R",
-        texto:
-          " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        texto: "I can't believe how much better I feel now. I wish I had known about this sooner. Watching this makes me hopeful that others can find the same kind of help.",
       },
       {
         img: "./assets/img/7.webp",
         nome: "Love2",
-        texto:
-          "he release of Letraset sheets containing Lorem Ipsum passages, and more recently  ",
+        texto: "My friend recommended something that completely changed my diabetes management. I see similar things being shared here. Never lose hope, this could be your answer!",
       },
       {
         img: "./assets/img/8.webp",
         nome: "Brunno",
-        texto:
-          "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        texto: "For anyone still struggling: I used to feel helpless too. I thought I'd never get better, but then I found a solution that made a difference. Don't give up! This video might be what you need.",
       },
       {
         img: "./assets/img/9.webp",
         nome: "Leo",
-        texto: "Finibus Bonorum et Malorum",
+        texto: "It took time and felt impossible, but I finally managed to get my blood sugar under control. There is a way, and I hope this video can help you find it too!",
       },
       {
         img: "./assets/img/10.webp",
         nome: "Cleo M.",
-        texto: "Lorem ipsum dolor sit amet...",
+        texto: "I thought diabetes would control my life forever. But I found help, and there is hope. Maybe this video will help others the way I was helped.",
       },
       {
         img: "./assets/img/11.webp",
         nome: "Lady L.",
-        texto:
-          "combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.",
+        texto: "I used to think nothing could help. After hearing about a natural approach, my life changed for the better. Watching this, I think it could change your life too.",
       },
       {
         img: "./assets/img/12.webp",
         nome: "The Weed",
-        texto:
-          "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        texto: "Trust me, there are ways to manage this. I found something that worked for me, and it looks like this video might help you find something too. Keep the faith!",
       },
       {
         img: "./assets/img/13.webp",
         nome: "Michael",
-        texto: "Sections 1.10.32 and 1.10.33 from ",
+        texto: "I want to share hope with anyone struggling. I found a solution that made a huge difference in my life, and maybe this video could be your turning point.",
       },
       {
         img: "./assets/img/14.webp",
         nome: "Roque",
-        texto: "The standard Lorem Ipsum passage, used since the 1500s",
+        texto: "I thought I had tried everything. But there's always something new to learn. Finding the right approach made all the difference for me. This video could be the one thing you haven't tried yet.",
       },
       {
         img: "./assets/img/15.webp",
         nome: "Thiago",
-        texto: "Section 1.10.32 of",
+        texto: "Don't be discouraged. I felt lost too, until I found this new approach. Now, I feel so much better. Maybe this video is the help you need.",
       },
       {
         img: "./assets/img/16.webp",
         nome: "Rodrygo ",
-        texto:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        texto: "To anyone feeling overwhelmed: I was in your shoes, but I found something that worked. I believe this video could help you too. Keep pushing through!",
       },
       {
         img: "./assets/img/17.webp",
         nome: "DJ Trash",
-        texto:
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+        texto: "Managing diabetes is tough, but not impossible. I found a way, and I feel like this video might help others too. Don't lose hope!",
       },
       {
         img: "./assets/img/18.webp",
         nome: "Alone",
-        texto:
-          "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects",
+        texto: "I know the pain of feeling stuck with diabetes. Finding the right help was a game-changer for me. Maybe this video can be that help for you.",
       },
       {
         img: "./assets/img/19.webp",
         nome: "Mixely",
-        texto:
-          " give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects",
+        texto: "There are people out here who understand. I found support, and you can too. This video could be the first step to getting the support you need.",
       },
       {
         img: "./assets/img/20.webp",
         nome: "Pale Man",
-        texto: "Opa!",
+        texto: "Diabetes doesn't have to control you forever. There's always hope for change. Maybe this video will show you the way.",
       },
     ],
 
-    btnDisplay: "none", //nÃ£o mexe
-    contador: 730, //nÃ£o mexe
-    comentariosExibidos: [], //nÃ£o mexe
-    indiceComentario: 0, //nÃ£o mex
-    showContent: true, //nÃ£o mex
+    btnDisplay: "none", // Don't change
+    contador: 730, // Don't change
+    comentariosExibidos: [], // Don't change
+    indiceComentario: 0, // Don't change
+    showContent: true, // Don't change
   },
   mounted() {
     this.exibirComentario();
