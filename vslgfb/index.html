@@ -101,9 +101,14 @@
            document.addEventListener("DOMContentLoaded", function () {
           var s = document.createElement("script");
           (s.src =
-            "https://scripts.converteai.net/60ab1fa6-578e-480b-87e8-9a54de116ac5/players/641a178c4c45d90008fba39c/player.js"),
-            (s.async = !0),
-            document.head.appendChild(s);
+            "https://scripts.converteai.net/60ab1fa6-578e-480b-87e8-9a54de116ac5/players/641a178c4c45d90008fba39c/player.js");
+    s.defer = true;
+    s.onload = function() {
+      if (window.playerInstance) {
+        window.playerInstance.play();
+      }
+    }
+            document.head.appendChild(s);});
         </script>
 
         <h1>
