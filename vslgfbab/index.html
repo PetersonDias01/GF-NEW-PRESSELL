@@ -27,6 +27,11 @@
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
+    <style>
+      .elementor-element:has(#smartplayer) {
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -49,27 +54,7 @@
           <!-- Player de vídeo será inserido aqui pelo script -->
         </div>
         
-        <script type="text/javascript" id="scr_6736c094dc7073000cad4724">
-          document.addEventListener("DOMContentLoaded", function () {
-            var s = document.createElement("script");
-            s.src = "https://scripts.converteai.net/a76ac209-8972-4778-ba5e-b1dba6c55b6e/ab-test/6736c094dc7073000cad4724/player.js";
-            s.defer = true;
-            s.onload = function () {
-              if (typeof window.playerInstance !== "undefined" && typeof window.playerInstance.setup === "function") {
-                // Inicialize o player usando o container correto
-                window.playerInstance.setup({
-                  container: "#video-container",
-                  autoplay: true,
-                  muted: true // Para evitar problemas de autoplay em alguns navegadores
-                });
-              } else {
-                console.error("Player instance not found or setup function unavailable");
-              }
-            };
-            document.head.appendChild(s);
-          });
-        </script>
-
+       <script type="text/javascript" id="scr_6736c094dc7073000cad4724"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/a76ac209-8972-4778-ba5e-b1dba6c55b6e/ab-test/6736c094dc7073000cad4724/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
         <h1>
           TAKE CONTROL OF YOUR DIABETES IN LESS THAN 2 MONTHS WITH THIS REVOLUTIONARY METHOD - WATCH AND TRANSFORM YOUR LIFE TODAY!
         </h1>
