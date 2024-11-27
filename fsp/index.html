@@ -167,9 +167,9 @@
             }, 5000);
           },
           loadComentarios() {
-            // Carrega comentários do arquivo main.js
+            // Verifica se a função loadChatComentarios existe e a utiliza
             if (typeof loadChatComentarios === 'function') {
-              this.comentariosExibidos = loadChatComentarios();
+              this.comentariosExibidos = loadChatComentarios() || [];
             }
           }
         }
