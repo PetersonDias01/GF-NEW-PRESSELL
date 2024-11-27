@@ -45,15 +45,16 @@
             var s = document.createElement("script");
             s.src = "https://scripts.converteai.net/a76ac209-8972-4778-ba5e-b1dba6c55b6e/players/67472c96713b79a16f9a7fa9/player.js";
             s.async = true;
-            document.head.appendChild(s);
-
-            // Remover thumbnail quando o script do player carregar
             s.onload = function() {
+              if (window.playerInstance) {
+                window.playerInstance.play();
+              }
               var thumbnail = document.getElementById("thumb_67472c96713b79a16f9a7fa9");
               if (thumbnail) {
                 thumbnail.style.display = "none";
               }
             };
+            document.head.appendChild(s);
           });
         </script>
 
@@ -61,7 +62,7 @@
 
         <div class="assistindo" bis_skin_checked="1">
           <img src="assets/img/gif_live.gif" alt="live now" />
-         <p><span id="contador">{{contador}}</span> watching now</p>
+          <p><span id="contador">0</span> watching now</p>
         </div>
 
         <div class="area_user">
@@ -141,25 +142,35 @@
       </nav>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      showContent: false,
-      comentariosExibidos: [
-        { id: 1, nome: 'User1', texto: 'This is a great video!', img: 'assets/img/user1.png' },
-        { id: 2, nome: 'User2', texto: 'Very informative, thanks!', img: 'assets/img/user2.png' }
-      ]
-    },
-    methods: {
-      toggleContent() {
-        this.showContent = !this.showContent;
-      }
-    }
-  });
-</script>
-<script src="assets/js/main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          showContent: false,
+          comentariosExibidos: [
+            { id: 1, nome: 'User1', texto: 'This is a great video!', img: 'assets/img/user1.png' },
+            { id: 2, nome: 'User2', texto: 'Very informative, thanks!', img: 'assets/img/user2.png' }
+          ],
+          contador: 10 // Valor inicial do contador de visualizações
+        },
+        mounted() {
+          this.startContador();
+        },
+        methods: {
+          toggleContent() {
+            this.showContent = !this.showContent;
+          },
+          startContador() {
+            setInterval(() => {
+              this.contador++;
+              document.getElementById('contador').innerText = this.contador;
+            }, 5000);
+          }
+        }
+      });
+    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
+
