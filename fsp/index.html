@@ -141,24 +141,25 @@
       </nav>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script>
-      new Vue({
-        el: '#app',
-        data: {
-          showContent: false,
-          comentariosExibidos: [
-            { id: 1, nome: 'User1', texto: 'This is a great video!', img: 'assets/img/user1.png' },
-            { id: 2, nome: 'User2', texto: 'Very informative, thanks!', img: 'assets/img/user2.png' }
-          ]
-        },
-        methods: {
-          toggleContent() {
-            this.showContent = !this.showContent;
-          }
-        }
-      });
-    </script>
-    <script src="assets/js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      showContent: false,
+      comentariosExibidos: [
+        { id: 1, nome: 'User1', texto: 'This is a great video!', img: 'assets/img/user1.png' },
+        { id: 2, nome: 'User2', texto: 'Very informative, thanks!', img: 'assets/img/user2.png' }
+      ]
+    },
+    methods: {
+      toggleContent() {
+        this.showContent = !this.showContent;
+      }
+    }
+  });
+</script>
+<script src="assets/js/main.js"></script>
+
   </body>
 </html>
