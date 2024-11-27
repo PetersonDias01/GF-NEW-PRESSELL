@@ -150,7 +150,7 @@
         data: {
           showContent: false,
           comentariosExibidos: [],
-          contador: 98 // Valor inicial do contador de visualizações
+          contador: 99 // Valor inicial do contador de visualizações
         },
         mounted() {
           this.startContador();
@@ -171,6 +171,13 @@
             if (typeof loadChatComentarios === 'function') {
               this.comentariosExibidos = loadChatComentarios();
             }
+
+            // Atualiza os comentários periodicamente para garantir que todos sejam exibidos
+            setInterval(() => {
+              if (typeof loadChatComentarios === 'function') {
+                this.comentariosExibidos = loadChatComentarios();
+              }
+            }, 10000);
           }
         }
       });
