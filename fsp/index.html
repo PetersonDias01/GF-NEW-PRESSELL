@@ -143,19 +143,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="assets/js/main.js"></script>
     <script>
       new Vue({
         el: '#app',
         data: {
           showContent: false,
-          comentariosExibidos: [
-            { id: 1, nome: 'User1', texto: 'This is a great video!', img: 'assets/img/user1.png' },
-            { id: 2, nome: 'User2', texto: 'Very informative, thanks!', img: 'assets/img/user2.png' }
-          ],
-          contador: 10 // Valor inicial do contador de visualizações
+          comentariosExibidos: [],
+          contador: 98 // Valor inicial do contador de visualizações
         },
         mounted() {
           this.startContador();
+          this.loadComentarios();
         },
         methods: {
           toggleContent() {
@@ -166,11 +165,15 @@
               this.contador++;
               document.getElementById('contador').innerText = this.contador;
             }, 5000);
+          },
+          loadComentarios() {
+            // Carrega comentários do arquivo main.js
+            if (typeof loadChatComentarios === 'function') {
+              this.comentariosExibidos = loadChatComentarios();
+            }
           }
         }
       });
     </script>
-    <script src="assets/js/main.js"></script>
   </body>
 </html>
-
