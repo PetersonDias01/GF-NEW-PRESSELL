@@ -1,119 +1,119 @@
 new Vue({
   el: "#app",
   data: {
-    tempoEmSegundos: 5, // Delay time in seconds
-    min: 600, // Minimum number of people in the live
-    max: 1000, // Maximum number of people in the live
+    tempoEmSegundos: 5, // Tiempo de retraso en segundos
+    min: 600, // Número mínimo de personas en vivo
+    max: 1000, // Número máximo de personas en vivo
 
-    // Here we define the comments, with image, name, and text
+    // Aquí definimos los comentarios, con imagen, nombre y texto
     comentarios: [
       {
         img: "./assets/img/1.webp",
         nome: "Jennifer",
-        texto: "I have been struggling with diabetes for years. I really need help. But seeing this video gives me hope that I might finally find the solution I've been looking for.",
+        texto: "He estado luchando con la diabetes durante años. Realmente necesito ayuda. Pero ver este video me da esperanza de que finalmente pueda encontrar la solución que he estado buscando.",
       },
       {
         img: "./assets/img/2.webp",
         nome: "Michael",
-        texto: "I know how tough it can be. I was in the same situation, feeling hopeless, but this approach truly helped me stabilize my blood sugar levels. I wish I had found it sooner!",
+        texto: "Sé lo difícil que puede ser. Estaba en la misma situación, sintiéndome sin esperanza, pero este enfoque realmente me ayudó a estabilizar mis niveles de azúcar en la sangre. ¡Ojalá lo hubiera encontrado antes!",
       },
       {
         img: "./assets/img/3.webp",
         nome: "Richard S.",
-        texto: "I felt hopeless with my diabetes, always tired and frustrated, until I found this method. It really worked for me. I think this video might help many others too. Stay positive!",
+        texto: "Me sentía desesperado con mi diabetes, siempre cansado y frustrado, hasta que encontré este método. Realmente funcionó para mí. Creo que este video podría ayudar a muchas otras personas también. ¡Mantén una actitud positiva!",
       },
       {
         img: "./assets/img/4.webp",
         nome: "Barbara R.",
-        texto: "If you're struggling, just know that you're not alone. I was in the same place, feeling like there was no way out, but finally found a natural way to control it. This could be the turning point for you too!",
+        texto: "Si estás luchando, solo debes saber que no estás solo. Yo estaba en el mismo lugar, sintiendo que no había salida, pero finalmente encontré una forma natural de controlarlo. ¡Esto podría ser el punto de inflexión para ti también!",
       },
       {
         img: "./assets/img/5.webp",
         nome: "Selenna",
-        texto: "Diabetes was ruining my life. I felt defeated. But after making a few changes and finding some new methods, my life improved significantly. I feel like this video can really make a difference.",
+        texto: "La diabetes estaba arruinando mi vida. Me sentía derrotada. Pero después de hacer algunos cambios y encontrar nuevos métodos, mi vida mejoró significativamente. Siento que este video realmente puede hacer la diferencia.",
       },
       {
         img: "./assets/img/6.webp",
         nome: "Sarah R",
-        texto: "I can't believe how much better I feel now. I wish I had known about this sooner. Watching this makes me hopeful that others can find the same kind of help.",
+        texto: "No puedo creer lo mucho mejor que me siento ahora. Ojalá lo hubiera sabido antes. Ver esto me da esperanza de que otros puedan encontrar el mismo tipo de ayuda.",
       },
       {
         img: "./assets/img/7.webp",
         nome: "Mark Hernandez",
-        texto: "My friend recommended something that completely changed my diabetes management. I see similar things being shared here. Never lose hope, this could be your answer!",
+        texto: "Un amigo me recomendó algo que cambió completamente la manera en que manejo mi diabetes. Veo cosas similares compartidas aquí. Nunca pierdas la esperanza, ¡esto podría ser tu respuesta!",
       },
       {
         img: "./assets/img/8.webp",
         nome: "Anthony",
-        texto: "For anyone still struggling: I used to feel helpless too. I thought I'd never get better, but then I found a solution that made a difference. Don't give up! This video might be what you need.",
+        texto: "Para cualquiera que siga luchando: Yo también me sentía impotente. Pensé que nunca mejoraría, pero luego encontré una solución que hizo la diferencia. ¡No te rindas! Este video podría ser lo que necesitas.",
       },
       {
         img: "./assets/img/9.webp",
         nome: "David Miller",
-        texto: "It took time and felt impossible, but I finally managed to get my blood sugar under control. There is a way, and I hope this video can help you find it too!",
+        texto: "Tomó tiempo y se sintió imposible, pero finalmente logré controlar mi azúcar en la sangre. Hay una manera, y espero que este video también te ayude a encontrarla.",
       },
       {
         img: "./assets/img/10.webp",
         nome: "Cleo M.",
-        texto: "I thought diabetes would control my life forever. But I found help, and there is hope. Maybe this video will help others the way I was helped.",
+        texto: "Pensé que la diabetes controlaría mi vida para siempre. Pero encontré ayuda, y hay esperanza. Quizá este video ayudará a otros de la misma manera en que yo fui ayudado.",
       },
       {
         img: "./assets/img/11.webp",
         nome: "Lady L.",
-        texto: "I used to think nothing could help. After hearing about a natural approach, my life changed for the better. Watching this, I think it could change your life too.",
+        texto: "Solía pensar que nada podría ayudarme. Después de conocer un enfoque natural, mi vida cambió para mejor. Al ver esto, pienso que también podría cambiar tu vida.",
       },
       {
         img: "./assets/img/12.webp",
         nome: "Steve Lee",
-        texto: "Trust me, there are ways to manage this. I found something that worked for me, and it looks like this video might help you find something too. Keep the faith!",
+        texto: "Confía en mí, hay maneras de manejar esto. Encontré algo que funcionó para mí, y parece que este video podría ayudarte a encontrar algo también. ¡Mantén la fe!",
       },
       {
         img: "./assets/img/13.webp",
         nome: "Michael",
-        texto: "I want to share hope with anyone struggling. I found a solution that made a huge difference in my life, and maybe this video could be your turning point.",
+        texto: "Quiero compartir esperanza con cualquiera que esté luchando. Encontré una solución que hizo una gran diferencia en mi vida, y quizá este video podría ser tu punto de inflexión.",
       },
       {
         img: "./assets/img/14.webp",
         nome: "Christopher",
-        texto: "I thought I had tried everything. But there's always something new to learn. Finding the right approach made all the difference for me. This video could be the one thing you haven't tried yet.",
+        texto: "Pensé que ya había probado todo. Pero siempre hay algo nuevo que aprender. Encontrar el enfoque correcto hizo toda la diferencia para mí. Este video podría ser lo que no has intentado aún.",
       },
       {
         img: "./assets/img/15.webp",
         nome: "Paul Jackson",
-        texto: "Don't be discouraged. I felt lost too, until I found this new approach. Now, I feel so much better. Maybe this video is the help you need.",
+        texto: "No te desanimes. Yo también me sentía perdido, hasta que encontré este nuevo enfoque. Ahora me siento mucho mejor. Quizá este video sea la ayuda que necesitas.",
       },
       {
         img: "./assets/img/16.webp",
         nome: "Daniel Anderson ",
-        texto: "To anyone feeling overwhelmed: I was in your shoes, but I found something that worked. I believe this video could help you too. Keep pushing through!",
+        texto: "Para cualquiera que se sienta abrumado: Yo estuve en tu lugar, pero encontré algo que funcionó. Creo que este video también podría ayudarte. ¡Sigue adelante!",
       },
       {
         img: "./assets/img/17.webp",
         nome: "DJ Trash",
-        texto: "Managing diabetes is tough, but not impossible. I found a way, and I feel like this video might help others too. Don't lose hope!",
+        texto: "Manejar la diabetes es difícil, pero no imposible. Encontré una manera, y siento que este video podría ayudar a otros también. ¡No pierdas la esperanza!",
       },
       {
         img: "./assets/img/18.webp",
         nome: "Linda Brown",
-        texto: "I know the pain of feeling stuck with diabetes. Finding the right help was a game-changer for me. Maybe this video can be that help for you.",
+        texto: "Sé lo que es sentirte atrapado con la diabetes. Encontrar la ayuda correcta cambió mi vida. Quizá este video pueda ser esa ayuda para ti.",
       },
       {
         img: "./assets/img/19.webp",
         nome: "Betty Taylor",
-        texto: "There are people out here who understand. I found support, and you can too. This video could be the first step to getting the support you need.",
+        texto: "Hay personas aquí afuera que entienden. Encontré apoyo, y tú también puedes hacerlo. Este video podría ser el primer paso para obtener el apoyo que necesitas.",
       },
       {
         img: "./assets/img/20.webp",
         nome: "Andrew Perez",
-        texto: "Diabetes doesn't have to control you forever. There's always hope for change. Maybe this video will show you the way.",
+        texto: "La diabetes no tiene que controlarte para siempre. Siempre hay esperanza de cambio. Quizá este video te muestre el camino.",
       },
     ],
 
-    btnDisplay: "none", // Don't change
-    contador: 730, // Don't change
-    comentariosExibidos: [], // Don't change
-    indiceComentario: 0, // Don't change
-    showContent: true, // Don't change
+    btnDisplay: "none", // No cambiar
+    contador: 730, // No cambiar
+    comentariosExibidos: [], // No cambiar
+    indiceComentario: 0, // No cambiar
+    showContent: true, // No cambiar
   },
   mounted() {
     this.exibirComentario();
