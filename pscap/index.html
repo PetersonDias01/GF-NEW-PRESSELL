@@ -597,113 +597,13 @@ p.smsCheckArea span:first-child {
   <input type="hidden" value="false" id="ff-can-use-payment-intent-on-funnel-payments">
   <input type="hidden" value="false" id="ff-can-use-updated-source-api-deprecation">
 
-  <script type="text/javascript">
-    window.CFAppDomain = "app.clickfunnels.com"
-    window.domainIsCFInternal = "false" == "true"
-  </script>
+
   <script src="assets/lander.js"></script>
-
-  <div id="fb-root"></div>
-  <script>
-window.addEventListener('load', function(){
-	(function(d, s, id){
-	  if($('.fbCommentsPlaceholder').size()>0){
-	   var js, fjs = d.getElementsByTagName(s)[0];
-	   if (d.getElementById(id)) {return;}
-	   js = d.createElement(s); js.id = id;
-	   js.src = "https://connect.facebook.net/en_US/sdk.js";
-	   fjs.parentNode.insertBefore(js, fjs);
-	  }
-	 }(document, 'script', 'facebook-jssdk'));
-});
- </script>
-
-  <script>
-  window.cfFacebookInitOptions = {
-    appId            : 246441615530259,
-    autoLogAppEvents : false,
-    status           : true,
-    xfbml            : true,
-    version          : "v3.3"
-  };
-  window.fbAsyncInit = function() {
-    FB.init(window.cfFacebookInitOptions);
-  
-    // Iterates over all .fb-comments elements on the page, and renders them using the FB SDK.
-    // It only runs if we have not told the FB.init() to render XFBML on page load
-    var renderFacebookComments = function(renderXFBMLAtLoadTime) {
-      // If we have already marked XFBML to render at page load time, do not proceed.
-      if(renderXFBMLAtLoadTime) { return; }
-  
-      var comments = document.getElementsByClassName('fb-comments');
-      var i = 0;
-      var len = comments.length;
-      var comment = null;
-      for(; i < len; i++) {
-        comment = comments[i];
-        FB.XFBML.parse(comment.parentElement); // comments need to be rendered/parsed from their parent element.
-      }
-    }
-  
-    renderFacebookComments(true);
-  };
-</script>
-
 
 <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <![endif]-->
-  <form target="_parent" data-cf-form-action="true" action="webinar-registration-471312841718051681240" method="post" id="cfAR" style="display:none">
-    <span data-cf-form-fields="true"></span>
-    <input id="cf_contact_name" name="contact[name]" data-cf-form-field="name" placeholder="name" data-stripe="name">
-    <input id="cf_contact_first_name" name="contact[first_name]" data-cf-form-field="first_name" placeholder="first_name" data-recurly="first_name">
-    <input id="cf_contact_last_name" name="contact[last_name]" data-cf-form-field="last_name" placeholder="last_name" data-recurly="last_name">
-    <input id="cf_contact_email" name="contact[email]" data-cf-form-field="email" placeholder="email">
-    <input id="cf_contact_phone" name="contact[phone]" data-cf-form-field="phone" placeholder="phone" data-recurly="phone">
-    <input id="cf_contact_address" name="contact[address]" data-cf-form-field="address" placeholder="address" data-stripe="address_line1" data-recurly="address1">
-    <input id="cf_contact_city" name="contact[city]" data-cf-form-field="city" placeholder="city" data-stripe="address_city" data-recurly="city">
-    <input id="cf_contact_state" name="contact[state]" data-cf-form-field="state" placeholder="state" data-stripe="address_state" data-recurly="state">
-    <input id="cf_contact_country" name="contact[country]" data-cf-form-field="country" placeholder="country" data-stripe="address_country" data-recurly="country">
-    <input id="cf_contact_zip" name="contact[zip]" data-cf-form-field="zip" placeholder="ZIP" data-stripe="address_zip" data-recurly="postal_code">
-    <input id="cf_contact_shipping_address" name="contact[shipping_address]" data-cf-form-field="shipping_address" placeholder="shipping_address" data-stripe="shipping_address">
-    <input id="cf_contact_shipping_city" name="contact[shipping_city]" data-cf-form-field="shipping_city" placeholder="shipping_city" data-stripe="shipping_city">
-    <input id="cf_contact_shipping_state" name="contact[shipping_state]" data-cf-form-field="shipping_state" placeholder="shipping_state" data-stripe="shipping_state">
-    <input id="cf_contact_shipping_country" name="contact[shipping_country]" data-cf-form-field="shipping_country" placeholder="shipping_country" data-stripe="shipping_country">
-    <input id="cf_contact_shipping_zip" name="contact[shipping_zip]" data-cf-form-field="shipping_zip" placeholder="shipping_ZIP" data-stripe="shipping_zip">
-    <input id="cf_contact_vat_number" name="contact[vat_number]" data-cf-form-field="vat_number" data-recurly="vat_number">
-    <input id="cf_contact_affiliate_id" name="contact[affiliate_id]" data-cf-form-field="affiliate_id" data-param="affiliate_id">
-    <input id="cf_contact_cf_affiliate_id" name="contact[cf_affiliate_id]" data-cf-form-field="cf_affiliate_id" data-param="cf_affiliate_id">
-    <input id="cf_cf_affiliate_id" name="cf_affiliate_id" data-param="cf_affiliate_id">
-    <input id="cf_contact_affiliate_aff_sub" name="contact[aff_sub]" data-cf-form-field="aff_sub" data-param="aff_sub">
-    <input id="cf_contact_affiliate_aff_sub2" name="contact[aff_sub2]" data-cf-form-field="aff_sub2" data-param="aff_sub2">
-    <input id="cf_contact_time_zone" name="time_zone" data-cf-form-field="time_zone" placeholder="time_zone">
-    <input id="utm_source" name="utm_source" data-cf-form-field="utm_source" data-param="utm_source">
-    <input id="utm_medium" name="utm_medium" data-cf-form-field="utm_medium" data-param="utm_medium">
-    <input id="utm_campaign" name="utm_campaign" data-cf-form-field="utm_campaign" data-param="utm_campaign">
-    <input id="utm_term" name="utm_term" data-cf-form-field="utm_term" data-param="utm_term">
-    <input id="utm_content" name="utm_content" data-cf-form-field="utm_content" data-param="utm_content">
-    <input id="cf_uvid" name="cf_uvid" data-cf-form-field="cf_uvid">
-    <input type="text" name="webinar_delay" id="webinar_delay" placeholder="Webinar Delay">
-    <span data-cf-product-template="true">
-      <input type="radio" name="purchase[product_id]" value="" data-storage="false">
-      <input type="checkbox" name="purchase[product_ids][]" value="" data-storage="false">
-    </span>
-    <span data-cf-product-variations-template="true">
-      <input type="checkbox" class="pvPurchaseProductName" name="purchase[product_variants][][product_id]" value="" data-storage="false">
-      <input type="checkbox" class="pvPurchaseProductVariantName" name="purchase[product_variants][][product_variant_id]" value="" data-storage="false">
-      <input type="input" class="pvPurchaseProductVariantQuantity" name="purchase[product_variants][][quantity]" value="" data-storage="false">
-    </span>
-    <input id="cf_contact_number" data-stripe="number" data-storage="false" data-recurly="number">
-    <input id="cf_contact_month" data-stripe="exp-month" data-storage="" data-recurly="month">
-    <input id="cf_contact_year" data-stripe="exp-year" data-storage="" data-recurly="year">
-    <input id="cf_contact_month_year" data-stripe="exp" data-storage="">
-    <input id="cf_contact_cvc" data-stripe="cvc" data-storage="false" data-recurly="cvv">
-    <input type="hidden" name="purchase[payment_method_nonce]" data-storage="false">
-    <input type="hidden" name="purchase[order_saas_url]" data-storage="false">
-
-    <input type="submit">
-  <input name="contact[cart_affiliate_id]" value="" type="hidden" style="display:none;" data-param="affiliate">
-</form>
+  
   <span class="countdown-time" style="display:none;"></span>
   <span class="webinar-last-time" style="display:none;"></span>
   <span class="webinar-ext" style="display:none;"></span>
@@ -739,6 +639,6 @@ window.addEventListener('load', function(){
   </style>
 
  
-<script type="text/javascript" src="mailcheck.min.js" async="async"></script><script type="text/javascript">window.addEventListener("load",function(){for(var e=["ar","at","au","be","br","ca","ch","cl","cn","cz","de","dk","es","eu","fi","fr","hk","hu","in","it","jp","kr","mx","nl","no","nz","pl","pt","ru","se","tk","tr","tw","uk","us"],i=0;i<e.length;i++){var a=e[i];Mailcheck.defaultTopLevelDomains.push(a),Mailcheck.defaultTopLevelDomains.push("com."+a)}var t=Mailcheck.defaultDomains.slice();for(i=0;i<t.length;i++)for(var s=t[i],l=0;l<e.length;l++){a=e[l];Mailcheck.defaultDomains.push(s+"."+a)}Mailcheck.defaultDomains.push("clickfunnels.com"),$('input[name="email"]').on("blur",function(){_this=this,$(this).mailcheck({suggested:function(e,i){$(".email_suggestion").remove(),$(e).parent().append('<div class="email_suggestion">Did you mean <a href="#">'+i.full+"</a>?</div>")},empty:function(){$(".email_suggestion").remove()}}),$.each("chenowith52@gmail.com, test@test.com, test@gmail.com, test@mail.com".split(","),function(e,i){0<=$(_this).val().search(i.trim())&&($(".email_suggestion").remove(),$(_this).val(""),$(_this).after('<div class="email_suggestion">Please use real email.</div>'))})}),$("body").on("click",".email_suggestion a",function(){$('input[name="email"]').val($(this).text())})});</script><script type="text/javascript">function getURLParameter(e){return decodeURIComponent((RegExp(e+"=(.+?)(&|$)").exec(location.search)||[,null])[1])}function getURLParameterExact(e){for(var t=window.location.search.substring(1).split("&"),n=0;n<t.length;n++){var r=t[n].split("=");if(r[0]==e)return r[1]}}</script><script type="text/javascript">window.addEventListener("load",function(){$(function(){"null"!=getURLParameter("email")&&($('input[name="contact[email]"]').val(getURLParameterExact("email")),$("[name=email]").val(getURLParameterExact("email"))),"null"!=getURLParameter("name")&&($('input[name="contact[name]"]').val(getURLParameterExact("name")),$("[name=name]").val(getURLParameterExact("name"))),"null"!=getURLParameter("first_name")&&($('input[name="contact[first_name]"]').val(getURLParameter("first_name")),$("[name=first_name]").val(getURLParameter("first_name"))),"null"!=getURLParameter("last_name")&&($('input[name="contact[last_name]"]').val(getURLParameter("last_name")),$("[name=last_name]").val(getURLParameter("last_name"))),"null"!=getURLParameter("address_1")&&($('input[name="contact[address_1]"]').val(getURLParameter("address")),$("[name=address_1]").val(getURLParameter("address_1"))),"null"!=getURLParameter("address_2")&&($('input[name="contact[address_1]"]').val(getURLParameter("address")),$("[name=address_2]").val(getURLParameter("address_2"))),"null"!=getURLParameter("city")&&($('input[name="contact[city]"]').val(getURLParameter("city")),$("[name=city]").val(getURLParameter("city"))),"null"!=getURLParameter("state")&&($('input[name="contact[state]"]').val(getURLParameter("state")),$("[name=state]").val(getURLParameter("state"))),"null"!=getURLParameter("zip")&&($('input[name="contact[zip]"]').val(getURLParameter("zip")),$("[name=zip]").val(getURLParameter("zip"))),"null"!=getURLParameter("phone")&&($('input[name="contact[phone]"]').val(getURLParameter("phone")),$("[name=phone]").val(getURLParameter("phone")))})});</script>
+<script type="text/javascript">window.addEventListener("load",function(){for(var e=["ar","at","au","be","br","ca","ch","cl","cn","cz","de","dk","es","eu","fi","fr","hk","hu","in","it","jp","kr","mx","nl","no","nz","pl","pt","ru","se","tk","tr","tw","uk","us"],i=0;i<e.length;i++){var a=e[i];Mailcheck.defaultTopLevelDomains.push(a),Mailcheck.defaultTopLevelDomains.push("com."+a)}var t=Mailcheck.defaultDomains.slice();for(i=0;i<t.length;i++)for(var s=t[i],l=0;l<e.length;l++){a=e[l];Mailcheck.defaultDomains.push(s+"."+a)}Mailcheck.defaultDomains.push("clickfunnels.com"),$('input[name="email"]').on("blur",function(){_this=this,$(this).mailcheck({suggested:function(e,i){$(".email_suggestion").remove(),$(e).parent().append('<div class="email_suggestion">Did you mean <a href="#">'+i.full+"</a>?</div>")},empty:function(){$(".email_suggestion").remove()}}),$.each("chenowith52@gmail.com, test@test.com, test@gmail.com, test@mail.com".split(","),function(e,i){0<=$(_this).val().search(i.trim())&&($(".email_suggestion").remove(),$(_this).val(""),$(_this).after('<div class="email_suggestion">Please use real email.</div>'))})}),$("body").on("click",".email_suggestion a",function(){$('input[name="email"]').val($(this).text())})});</script><script type="text/javascript">function getURLParameter(e){return decodeURIComponent((RegExp(e+"=(.+?)(&|$)").exec(location.search)||[,null])[1])}function getURLParameterExact(e){for(var t=window.location.search.substring(1).split("&"),n=0;n<t.length;n++){var r=t[n].split("=");if(r[0]==e)return r[1]}}</script><script type="text/javascript">window.addEventListener("load",function(){$(function(){"null"!=getURLParameter("email")&&($('input[name="contact[email]"]').val(getURLParameterExact("email")),$("[name=email]").val(getURLParameterExact("email"))),"null"!=getURLParameter("name")&&($('input[name="contact[name]"]').val(getURLParameterExact("name")),$("[name=name]").val(getURLParameterExact("name"))),"null"!=getURLParameter("first_name")&&($('input[name="contact[first_name]"]').val(getURLParameter("first_name")),$("[name=first_name]").val(getURLParameter("first_name"))),"null"!=getURLParameter("last_name")&&($('input[name="contact[last_name]"]').val(getURLParameter("last_name")),$("[name=last_name]").val(getURLParameter("last_name"))),"null"!=getURLParameter("address_1")&&($('input[name="contact[address_1]"]').val(getURLParameter("address")),$("[name=address_1]").val(getURLParameter("address_1"))),"null"!=getURLParameter("address_2")&&($('input[name="contact[address_1]"]').val(getURLParameter("address")),$("[name=address_2]").val(getURLParameter("address_2"))),"null"!=getURLParameter("city")&&($('input[name="contact[city]"]').val(getURLParameter("city")),$("[name=city]").val(getURLParameter("city"))),"null"!=getURLParameter("state")&&($('input[name="contact[state]"]').val(getURLParameter("state")),$("[name=state]").val(getURLParameter("state"))),"null"!=getURLParameter("zip")&&($('input[name="contact[zip]"]').val(getURLParameter("zip")),$("[name=zip]").val(getURLParameter("zip"))),"null"!=getURLParameter("phone")&&($('input[name="contact[phone]"]').val(getURLParameter("phone")),$("[name=phone]").val(getURLParameter("phone")))})});</script>
 
 
