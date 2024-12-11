@@ -49,51 +49,7 @@ src="https://www.facebook.com/tr?id=XXXX&ev=PageView&noscript=1"
 <body>
 
 <script type="text/javascript" src="assets/pushcrew.js" async="async"></script><meta name='can_calculate_taxes' content='false'><script src="z/zbt7j_t6q8m_registration.js"></script>
-<script>
-// BEGIN: FunnelMerlin Code for Popup Handler
-
-	/* Notes, the name of the functions in the source code is such as
-		fm_showPopup1, fm_showPopup2, etc, but they have be renamed here
-		to make them more readable as to what they do, fm_showExitPopup 
-		and fm_showRegisterPopup. 
-	*/
-          
-	var fm_ok_to_show_exit_popup = true;	
-	$(function () {
-		/* These define what buttons activate popup */
-		$('#button-76417').click(fm_showRegisterPopup); // "Claim My Free Spot...Home Page"
-		$('#tmp_button-14712').click(fm_showRegisterPopup); // "Yes! Give Me Access...Home Page"
-		$('#button-88769-117').click(fm_showRegisterPopup); // "Yes! I Want To Reserve...Home Page"
-		$('#button-51695-105').click(fm_showRegisterPopup); // "Inside "Exit" popup... Exit Pop Claim my Spot"
-	
-		/* This sets what the "on exit" popup content displays.
-			 Call a function from below to toggle Row displays */
-		$(document).mouseleave(function () {
-			if (fm_ok_to_show_exit_popup) {
-				fm_showExitPopup();
-			}
-		});
-		$('.modalBackdropWrapper,.closeLPModal').click(function (e) {
-			fm_ok_to_show_exit_popup = true;
-		});          
-	});
-	
-	/* Set the ID's of the Row ID's to show/hide based upon button clicked */
-	
-	function fm_showExitPopup() {
-		$('#row--58537').show();
-		$('#row--41318').hide();
-	}
-	
-	function fm_showRegisterPopup() {
-		$('#row--58537').hide();
-		$('#row--41318').show();
-		fm_ok_to_show_exit_popup = false;
-	}
-
-// END: FunnelMerlin Code for Popup Handler 
-// version a  
-</script></body></head>
+</body></head>
   <body data-affiliate-param="affiliate_id" data-show-progress="true">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important">
     <filter id="grayscale">
