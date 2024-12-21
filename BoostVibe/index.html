@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="description" content="BoostVibe">
+	<meta name="keywords" content="BoostVibe">
+	<meta property="og:url" name="url" content="https://getBoostVibe.com/">
+	<meta property="og:image" name="image" content="https://getBoostVibe.com/assets/main/img/logo.png">
+	<meta property="twitter:image" name="image" content="https://getBoostVibe.com/assets/main/img/logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="icon" href="assets/favicon.ico">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+	<!-- End Google Fonts -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/main/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/main/bootstrap/bootstrap-icons.min.css">
+	<!-- END Bootstrap -->
+	
+	<!-- Main Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/main/css/main_new.css">
+	<!-- END Main Styles -->
+
+
+	<style>.sticky-nav {
+			background-color: var(--text-color);
+		}
+		@media (max-width: 991px) {
+			header {
+				background-color: var(--text-color);
+			}
+		}
+
+		.bottle-overlay {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			width: 25%;
+			height: 100%;
+			background-color: var(--secondary-color);
+			border-left: 10px solid var(--primary-color);
+			top: 0;
+			right: 0;
+		}
+		.bottle-overlay img {
+			position: relative;
+			margin-left: -40%;
+			transform: rotateZ(-8deg);
+			z-index: 3;
+		}
+		@media (max-width: 767px) {
+			.bottle-overlay {
+				position: initial;
+				width: 100%;
+				border-left: 0;
+				border-top: 10px solid var(--primary-color);
+				margin-top: 7rem;
+				text-align: center;
+			}
+			.bottle-overlay img {
+				margin: -9rem auto 1rem;
+				transform: none;
+			}
+		}
+
+		.couple-bg-banner {
+			background-image: url('assets/pages/home/img/couple-bg-banner.webp');
+			background-size: contain;
+			background-position: 65vw 0vw;
+			background-repeat: no-repeat;
+		}
+		@media (max-width: 1199px) {
+			.couple-bg-banner {
+				background-position: 55vw 0vw;
+			}
+		}
+		@media (max-width: 767px) {
+			.couple-bg-banner {
+				background-image: none;
+			}
+		}
+
+		#ingredients figure {
+			overflow: hidden;
+			border-right: 4px solid var(--primary-color);
+		}
+		#ingredients img {
+			max-width: 100px;
+		}
+		#hidden-section {
+            display: none; /* Section starts hidden */
+        }
+
+		/* ====================== COUNT IMAGE ====================== */
+		.count-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 16px 0 48px 0;
+        background-color: white;
+      }
+
+      @media (max-width: 768px) {
+        .count-img {
+          margin-top: 24px;
+        }
+      }
+
+      .count-img-text {
+        padding-top: 8px;
+        font-weight: 800;
+        color: #212529;
+        font-size: 28px;
+      }
+
+      @media (max-width: 425px) {
+        .count-img-text {
+          font-size: 24px;
+        }
+      }
+
+      .count-img-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 24px;
+        opacity: 0.5;
+      }
+
+      @media (max-width: 768px) {
+        .count-img-img {
+          width: 516px;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .count-img-img {
+          width: 350px;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+      }
+
+      .count-img-img img {
+        width: 100px;
+        height: 100px;
+      }
+	   /* ====================== MODAL LATERAL ====================== */
+	   .modal-right {
+        background-color: #216C56;
+        border-radius: 999px;
+        padding-inline: 16px;
+        position: fixed;
+        bottom: 32px;
+        right: -800px;
+        z-index: 1000;
+        transition: right 0.5s ease-in-out;
+      }
+
+      @media (max-width: 425px) {
+        .modal-right {
+          padding-inline: 12px;
+        }
+      }
+
+      .modal-right span {
+        color: white;
+        font-size: 20px;
+      }
+
+      @media (max-width: 425px) {
+        .modal-right span {
+          font-size: 16px;
+        }
+      }
+
+      .modal-right-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 8px 24px;
+      }
+
+      @media (max-width: 425px) {
+        .modal-right-box {
+          gap: 12px;
+          padding: 6px 16px;
+        }
+      }
+
+      .modal-right-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+      }
+
+      .modal-right-img {
+        width: 84px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-right-img img {
+        width: 100%;
+      }
+
+      .modal-right-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* ====================== MODAL LATERAL  ====================== */
+	</style>
+
+
+</head>
+<body>
+
+
+		<!-- =============== MODAL LATERAL =============== -->
+		<div class="modal-right">
+		  <div class="modal-right-box">
+			<div class="modal-right-img">
+			  <img id="one-bottle" src="https://getBoostVibe.com/wp-content/uploads/2024/08/Group-1954.png" alt="">
+			  <img id="three-bottles" src="https://getBoostVibe.com/wp-content/uploads/2024/08/Group-1953.png" alt="">
+			  <img id="six-bottles" src="https://getBoostVibe.com/wp-content/uploads/2024/08/Group-1955.png" alt="">
+			</div>
+  
+			<div class="modal-right-text">
+			  <div>
+				<span id="customer-name">William</span>
+				<span id="customer-location">Ohio</span>
+			  </div>
+			  <div>
+				<span style="color: #EED209; font-weight: 700;">Just Bough</span>
+				<span id="items-purchased" style="color: #EED209; font-weight: 700;">3 Bootles</span>
+			  </div>
+			  <div>
+				<i class="bi bi-patch-check" style="color: white; font-size: 24px;"></i>
+				<span> Verified</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- =============== MODAL LATERAL =============== -->
+
+	
+	<!-- Video Element -->
+    <header class="py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+  
+              <!-- VSL -->
+			  <div id="vid_6737e1ecdc7073000cade063" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0;"> <img id="thumb_6737e1ecdc7073000cade063" src="https://images.converteai.net/af16fa40-90b7-451c-a351-04c9c9b59256/players/6737e1ecdc7073000cade063/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> <div id="backdrop_6737e1ecdc7073000cade063" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> </div> <script type="text/javascript" id="scr_6737e1ecdc7073000cade063"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/af16fa40-90b7-451c-a351-04c9c9b59256/players/6737e1ecdc7073000cade063/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>           
+              
+               
+
+                </div>
+          </div>
+        </div>
+      </header>
+
+
+	  <!--===============TEMPORIZADOR PARA ESCONDER O DTC!!!===============-->
+	  <style>.esconder { display: none }</style>
+
+	  <script type="text/javascript">
+	  document.addEventListener("DOMContentLoaded", function() {
+	  /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
+	  var SECONDS_TO_DISPLAY = 20;
+	  var CLASS_TO_DISPLAY = ".esconder";
+	  /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
+	  var attempts = 0;
+	  var elsHiddenList = [];
+	  var elsDisplayed = false;
+	  var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+	  var alreadyDisplayedKey = "alreadyElsDisplayed" + SECONDS_TO_DISPLAY;
+	  var alreadyElsDisplayed = null;
+	  try {
+		  alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
+	  } catch(e) {
+		  console.warn('Failed to read data from localStorage: ', e);
+	  }
+	  setTimeout(function () { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
+	  var showHiddenElements = function () {
+	  elsDisplayed = true;
+	  elsHiddenList.forEach((e) => e.style.display = "block");
+	  try {
+		localStorage.setItem(alreadyDisplayedKey, true);
+	  } catch (e) {
+		console.warn('Failed to save data in localStorage: ', e);
+	  }
+	  }
+	  var startWatchVideoProgress = function () {
+	  if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+	  if (attempts >= 10) return;
+	  attempts += 1;
+	  return setTimeout(function () { startWatchVideoProgress() }, 1000);
+	  }
+	  smartplayer.instances[0].on('timeupdate', () => {
+	  if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+	  if (smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
+	  showHiddenElements();
+	  })
+	  }
+	  if (alreadyElsDisplayed === 'true') {
+	  setTimeout(function () { showHiddenElements(); }, 100);
+	  } else {
+	  startWatchVideoProgress()
+	  }
+	  });
+	  </script>
+
+
+
+
+
+<!--ESCONDER DTC-->
+	<div class="esconder">
+
+<!--Header-->
+	<section class="py-5" style="background-color: var(--secondary-color);">
+		<div class="container text-white text-center">
+			<h2 class="fw-bold m-0">To get started with <span style="color: var(--primary-color);">BoostVibe</span> today, simply click below and take advantage of this unique special time-limited offer…</h2>
+		</div>
+	</section>
+
+	
+	<div class="triangle"></div>
+
+	<div id="order-now"></div>
+	
+	<section id="products" class="pb-4 pb-md-5">
+		<div class="container">
+			<div class="row align-items-center">
+				
+				<!-- 1 Bottles -->
+				<div class="col-12 col-md-4 mb-3 order-3 order-md-1">
+					<a href="LINK DO CHECKOUT AQUI" title="2 Bottles" class="d-block rounded-3 shadow item" style="text-decoration: none; padding: 3px; color: var(--text-color); background-color: var(--primary-color-light);">
+						<!-- desktop -->
+						<div class="d-none d-md-block text-center rounded-top-3 rounded-bottom-3 overflow-hidden" style="background-color: #fbfbfb;">
+							<div class="py-3 pb-2" style="background-color: var(--primary-color-light);">
+								<h3 class="my-0 fw-bold">2 Bottle</h3>
+								<p class="mb-0 fs-5">60 Days</p>
+							</div>
+							<div class="w-100" style="clip-path: polygon(100% 0, 0 0, 50% 100%); margin: -1px auto 0; background: var(--primary-color-light); height: 30px;"></div>
+							<img src="https://getboostvibe.com/wp-content/uploads/2024/11/2-POTES-COM-SELO.webp" alt="2 Bottles" style="max-height: 200px;">
+							<div class="d-flex gap-1 lh-1 px-2 align-items-center mx-auto price" style="max-width: fit-content;">
+								<b style="font-size: 4.6em;"><sup class="fs-3">$</sup>79</b>
+								<b class="text-start opacity-75">PER<br>BOTTLE</b>
+							</div>
+							<div class="mb-2 savings" style="font-size: .85em;">
+								<div class="p-2 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+									<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $436!</b>
+								</div>
+								<div class="p-2" style="border-bottom: 1px solid #ccc;">
+									<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 Days GUARANTEE</b>
+								</div>
+							</div>
+							<div class="px-2">
+								<div class="btn btn-primary rounded-3 button-bg promo fs-4 w-100" style="font-weight: 900; max-width: 250px;">BUY NOW</div>
+							</div>
+							<img src="assets/main/products/img/cards.png" alt="Cards" class="img-fluid mx-auto my-2" style="max-width: 180px;">
+							<div class="px-2 mb-3 totals">
+								Total: <s style="text-decoration-color: red; text-decoration-thickness: 2px;">$179</s>&nbsp;<b>$79</b>
+								<br>
+								<b>+19.99 SHIPPING</b>
+							</div>
+						</div>
+						<!-- mobile -->
+						<div class="d-md-none text-center rounded-3 pt-2 overflow-hidden" style="background-color: #fbfbfb;">
+							<div class="container">
+								<div class="row align-items-center">
+									<div class="col-6 p-1">
+										<div class="mb-1 lh-1 supply"><b>2 Bottle</b><br><span style="font-size: .8em;">60 days</span></div>
+										<img src="https://getboostvibe.com/wp-content/uploads/2024/11/2-POTES-COM-SELO.webp" alt="2 Bottles" style="max-height: 200px;">
+									</div>
+									<div class="col-6 p-1">
+										<div class="d-flex gap-1 lh-1 align-items-center mx-auto price" style="max-width: fit-content;">
+											<b style="font-size: 2.8em; letter-spacing: -.06em;"><sup class="fs-5">$</sup>79</b>
+											<b class="text-start" style="font-size: .65em;">PER<br>BOTTLE</b>
+										</div>
+										<div class="mb-2 lh-1 savings" style="font-size: .7em;">
+											<div class="p-1 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+												<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $436!</b>
+											</div>
+											<div class="p-1" style="border-bottom: 1px solid #ccc;">
+												<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 DAYS GUARANTEE</b>
+											</div>
+										</div>
+										<div class="totals lh-1" style="font-size: .8em;">
+											Total:&nbsp;<s style="text-decoration-color: red; text-decoration-thickness: 2px;">$179</s>&nbsp;<b>$79</b>
+											<br>
+											<b>+9.99 SHIPPING</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="p-2">
+								<div class="btn btn-primary rounded-3 button-bg promo w-100" style="font-weight: 900; max-width: 250px;">BUY NOW</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- END 1 Bottles -->
+
+				<!-- 6 Bottles -->
+				<div class="col-12 col-md-4 mb-3 order-1 order-md-2">
+					<a href="LINK DO CHECKOUT AQUI" title="6 Bottles" class="d-block rounded-3 shadow item promo" style="text-decoration: none; padding: 3px; color: var(--text-color); background-image: linear-gradient(to right, var(--primary-color-dark), var(--primary-color-light), var(--primary-color-dark));">
+						<!-- desktop -->
+						<div class="d-none d-md-block text-center rounded-top-3 rounded-bottom-3 overflow-hidden" style="background-color: var(--primary-color-light);">
+							<div class="py-3 pb-2" style="background-image: linear-gradient(to right, var(--primary-color-dark), var(--primary-color-light), var(--primary-color-dark));">
+								<h3 class="my-0 fw-bold">Best Value!</h3>
+								<p class="mb-0 fs-5">180 DAYS, 6 Bottles</p>
+							</div>
+							<div class="w-100" style="clip-path: polygon(100% 0, 0 0, 50% 100%); margin: -1px auto 0; background-image: linear-gradient(to right, var(--primary-color-dark), var(--primary-color-light), var(--primary-color-dark)); height: 30px;"></div>
+							<img src="https://getboostvibe.com/wp-content/uploads/2024/11/6-POTES-COM-SELO.webp" alt="6 Bottles" style="max-height: 220px;">
+							<div class="d-flex gap-1 lh-1 px-2 align-items-center mx-auto price" style="max-width: fit-content;">
+								<b style="font-size: 4.6em;"><sup class="fs-3">$</sup>49</b>
+								<b class="text-start opacity-75">PER<br>BOTTLE</b>
+							</div>
+							<div class="mb-2 text-body savings" style="font-size: .85em;">
+								<div class="p-2 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+									<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $1488!</b>
+								</div>
+								<div class="p-2 mb-1" style="border-bottom: 1px solid #ccc;">
+									<b><i class="bi bi-check-circle-fill"></i>&nbsp;BIGGEST DISCOUNT</b>
+								</div>
+								<div class="p-2" style="border-bottom: 1px solid #ccc;">
+									<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 DAYS GUARANTEE</b>
+								</div>
+							</div>
+							<div class="px-2">
+								<div class="btn btn-primary rounded-3 button-bg promo fs-3 w-100" style="font-weight: 900; max-width: 250px;">BUY NOW</div>
+							</div>
+							<img src="assets/main/products/img/cards.png" alt="Cards" class="img-fluid mx-auto my-2" style="max-width: 200px;">
+							<div class="px-2 mb-3 totals">
+								Total: <s style="text-decoration-color: red; text-decoration-thickness: 2px;">$1782</s> <b>$294</b>
+								<br>
+								<b>+&nbsp;<span style="color: var(--contrast-color);">FREE</span> SHIPPING</b>
+							</div>
+						</div>
+						<!-- mobile -->
+						<div class="d-md-none text-center rounded-3 overflow-hidden" style="background-color: var(--primary-color-light);">
+							<div class="pt-1 fw-bold item-header" style="background-image: linear-gradient(to right, var(--primary-color), var(--light-color), var(--primary-color)); font-size: .9em;">BEST VALUE!</div>
+							<div class="w-100" style="clip-path: polygon(100% 0, 0 0, 50% 100%); margin: -1px auto 0; background-image: linear-gradient(to right, var(--primary-color), var(--light-color), var(--primary-color)); height: 14px;"></div>
+							<div class="container">
+								<div class="row align-items-center">
+									<div class="col-6 p-1">
+										<div class="mb-1 lh-1 supply"><b>6 Bottles</b><br><span style="font-size: .8em;"> 180 Day Supply</span></div>
+										<img src="https://getboostvibe.com/wp-content/uploads/2024/11/6-POTES-COM-SELO.webp" alt=" alt="6 Bottles" style="max-height: 200px;">
+									</div>
+									<div class="col-6 p-1">
+										<div class="d-flex gap-1 lh-1 align-items-center mx-auto price" style="max-width: fit-content;">
+											<b style="font-size: 2.8em; letter-spacing: -.06em;"><sup class="fs-5">$</sup>49</b>
+											<b class="text-start" style="font-size: .65em;">PER<br>BOTTLE</b>
+										</div>
+										<div class="mb-2 lh-1 savings" style="font-size: .7em;">
+											<div class="p-1 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+												<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $1488!</b>
+											</div>
+											<div class="p-1" style="border-bottom: 1px solid #ccc;">
+												<b><i class="bi bi-check-circle-fill"></i>&nbsp;BIGGEST DISCOUNT</b>
+											</div>
+											<div class="p-1" style="border-bottom: 1px solid #ccc;">
+												<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 DAYS GUARANTEE</b>
+											</div>
+										</div>
+										<div class="totals" style="font-size: .8em;">
+											Total:&nbsp;<s style="text-decoration-color: red; text-decoration-thickness: 2px;">$1782</s>&nbsp;<b>$294</b>
+											<br>
+											<b>+&nbsp;<span style="color: var(--contrast-color);">FREE</span> SHIPPING</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-2">
+								<div class="btn btn-primary w-100 mb-2 rounded-3 button-bg promo">
+									<div><i class="bi bi-cart-plus-fill"></i>&nbsp;<b>BUY NOW</b></div>
+								</div>
+							</div>
+							<div class="w-100" style="clip-path: polygon(100% 0, 0 0, 50% 100%); rotate: 180deg; margin: -1px auto 0; background: var(--primary-color); height: 14px;"></div>
+						</div>
+					</a>
+				</div>
+				<!-- END 6 Bottles -->
+
+				<!-- 3 Bottles -->
+				<div class="col-12 col-md-4 mb-3 order-2 order-md-3">
+					<a href="LINK DO CHECKOUT AQUI" title="3 Bottles" class="d-block rounded-3 shadow item" style="text-decoration: none; padding: 3px; color: var(--text-color); background-color: var(--primary-color-light);">
+						<!-- desktop -->
+						<div class="d-none d-md-block text-center rounded-top-3 rounded-bottom-3 overflow-hidden" style="background-color: #fbfbfb;">
+							<div class="py-3 pb-2" style="background-color: var(--primary-color-light);">
+								<h3 class="my-0 fw-bold">Good Value</h3>
+								<p class="mb-0 fs-5">90 Days, 3 Bottles</p>
+							</div>
+							<div class="w-100" style="clip-path: polygon(100% 0, 0 0, 50% 100%); margin: -1px auto 0; background: var(--primary-color-light); height: 30px;"></div>
+							<img src="https://getboostvibe.com/wp-content/uploads/2024/11/3-POTES-COM-SELO.webp" alt="3 Bottles" style="max-height: 200px;">
+							<div class="d-flex gap-1 lh-1 px-2 align-items-center mx-auto price" style="max-width: fit-content;">
+								<b style="font-size: 4.6em;"><sup class="fs-3">$</sup>69</b>
+								<b class="text-start opacity-75">PER<br>BOTTLE</b>
+							</div>
+							<div class="mb-2 savings" style="font-size: .85em;">
+								<div class="p-2 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+									<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $684!</b>
+								</div>
+								<div class="p-2" style="border-bottom: 1px solid #ccc;">
+									<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 DAYS GUARANTEE</b>
+								</div>
+							</div>
+							<div class="px-2">
+								<div class="btn btn-primary rounded-3 button-bg promo fs-4 w-100" style="font-weight: 900; max-width: 250px;">BUY NOW</div>
+							</div>
+							<img src="assets/main/products/img/cards.png" alt="Cards" class="img-fluid mx-auto my-2" style="max-width: 180px;">
+							<div class="px-2 mb-3 totals">
+								Total: <s style="text-decoration-color: red; text-decoration-thickness: 2px;">$891</s> <b>$207</b>
+								<br>
+								<b>+&nbsp;<span style="color: var(--contrast-color);">FREE</span> SHIPPING</b>
+							</div>
+						</div>
+						<!-- mobile -->
+						<div class="d-md-none text-center rounded-3 pt-2 overflow-hidden" style="background-color: #fbfbfb;">
+							<div class="container">
+								<div class="row align-items-center">
+									<div class="col-6 p-1">
+										<div class="mb-1 lh-1 supply"><b>Good Value</b><br><span style="font-size: .8em;">90 days, 3 bottles</span></div>
+										<img src="https://getboostvibe.com/wp-content/uploads/2024/11/3-POTES-COM-SELO.webp" alt="3 Bottles" style="max-height: 200px;">
+									</div>
+									<div class="col-6 p-1">
+										<div class="d-flex gap-1 lh-1 align-items-center mx-auto price" style="max-width: fit-content;">
+											<b style="font-size: 2.8em; letter-spacing: -.06em;"><sup class="fs-5">$</sup>69</b>
+											<b class="text-start" style="font-size: .65em;">PER<br>BOTTLE</b>
+										</div>
+										<div class="mb-2 lh-1 savings" style="font-size: .7em;">
+											<div class="p-1 mb-1" style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+												<b style="color: var(--contrast-color);"><i class="bi bi-check-circle-fill"></i>&nbsp;YOU SAVE $684!</b>
+											</div>
+											<div class="p-1" style="border-bottom: 1px solid #ccc;">
+												<b><i class="bi bi-check-circle-fill"></i>&nbsp;180 DAYS GUARANTEE</b>
+											</div>
+										</div>
+										<div class="totals lh-1" style="font-size: .8em;">
+											Total:&nbsp;<s style="text-decoration-color: red; text-decoration-thickness: 2px;">$891</s> <b>$177</b>
+											<br>
+											<b>+&nbsp;<span style="color: var(--contrast-color);">FREE</span> SHIPPING</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="p-2">
+								<div class="btn btn-primary rounded-3 button-bg promo w-100" style="font-weight: 900; max-width: 250px;">BUY NOW</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- END 3 Bottles -->
+				
+			</div>
+		</div>
+	</section>
+	
+	<!--Galantia-->
+	<section id="guarantee" class="py-5 mb-5">
+		<div class="py-3"></div>
+		<div class="position-relative" style="background-color: var(--secondary-color);">
+			<div class="w-100 position-relative" style="background-image: url(assets/pages/home/img/brush-top-w.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100px; transform: rotateX(180deg) rotateY(180deg); z-index: 2;"></div>
+			<div class="container text-center">
+				<div class="rounded-3 p-2 p-sm-3 position-relative shadow" style="background-color: var(--light-color); margin: -10rem auto; z-index: 3;">
+					<div class="rounded-3 p-3 p-sm-4 bg-white" style="border: 2px solid var(--primary-color);">
+						<img src="assets/main/img/guarantee-seal.webp" alt="Guarantee" class="mb-4" style="max-width: 200px;">
+						<h2 class="fw-bold mb-4">100% Satisfaction Guarantee</h2>
+						<p>Try BoostVibe with the Peace of Mind of Our 60-Day Total Satisfaction Guarantee!</p>
+						<p>We're so confident that you'll love the results from BoostVibe that we want to take all the risk out of your purchase decision. That's why we offer an unconditional 2-month (60-day) guarantee. So, if for any reason you feel it's not for you, just send everything back within 60 DAYS, and you'll get every penny back. No fine print, no pressure. It's our promise of transparency and commitment to your satisfaction!</p>
+					</div>
+				</div>
+			</div>
+			<div class="w-100 position-relative" style="background-image: url(assets/pages/home/img/brush-top-w.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100px; z-index: 2;"></div>
+		</div>
+		<div class="py-4"></div>
+	</section>
+
+<!--END Galantia-->
+
+	<!--FAQ
+	<section id="faq" class="py-5" style="background-color: var(--light-color);">
+		<div class="container">
+			<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+			<div class="accordion" id="accordionFlushExample">
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingOne">
+						<button class="accordion-button p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">How does BoostVibe work?</button>
+					</h2>
+					<div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">BoostVibe include powerful ingredients that provide essential nutrition to your “masculine health”, which plays a crucial role in sexual performance by holding healthy blood flow. That way you will have nice moments with your wife.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingTwo">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Are there any side effects?</button>
+					</h2>
+					<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">BoostVibe is a 100% natural supplement, which means there are no side effects. But as always, if you currently have a medical condition or you're taking other prescription medication, we advise you to show a bottle of BoostVibe to your doctor before you use it, just to put your mind at ease.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingThree">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">What is your money back guarantee?</button>
+					</h2>
+					<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">It is a risk-free option that we are offering you because we believe in this formula so much.<br>It means you can try BoostVibe for a full 90 DAYS.<br>And if you are not completely convinced by the amazing results, then you can simply get your money back.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingFour">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">How many bottles should I order?</button>
+					</h2>
+					<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">Most of our customers order six bottles at a time, and many even double their orders because they want to enjoy the benefits of this incredible sexual health support formula for as long as possible.<br>It's a smart choice because those who buy the 6-bottle package get a big discount and free shipping. It offers great value and savings, especially since, once they start seeing results, our customers usually want to place another order.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingFive">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">How do I use BoostVibe?</button>
+					</h2>
+					<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">Simply take 1 gummy per day with a glass of water.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingSix">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">Is this a one-off purchase?</button>
+					</h2>
+					<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">Yes, your order is a one-off purchase with no hidden autoship, clauses or charges. The price you see on the checkout page is the only price you will have to pay.</div>
+					</div>
+				</div>
+				<div class="accordion-item mb-2">
+					<h2 class="accordion-header" id="flush-headingSeven">
+						<button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">What Should I Do Next?</button>
+					</h2>
+					<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body p-3">We believe you're ready to take the next step with BoostVibe. To begin your order, simply click on your preferred option below. Enter your details on the following page to complete your purchase, and then sit back and relax. Our dedicated team will handle the rest, ensuring your order is packed and shipped to your door in just a few days.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+END FAQ-->
+</div>
+
+<footer class="text-center py-5" style="background-color: var(--secondary-color);">
+	<div class="container text-white text-center" style="max-width: 1100px;">
+		<div style="font-size: .5em;">
+			<p>Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease.</p>
+			<p>The website's content and the product for sale is based upon the author's opinion and is provided solely on an "AS IS" and "AS AVAILABLE" basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here. Neither Digistore nor the author are engaged in rendering medical or similar professional services or advice via this website or in the product, and the information provided is not intended to replace medical advice offered by a physician or other licensed healthcare provider. You should not construe Digistore's sale of this product as an endorsement by Digistore of the views expressed herein, or any warranty or guarantee of any strategy, recommendation, treatment, action, or application of advice made by the author of the product.</p>
+			<p>Some names and personal identifying information on this site have been changed to protect the privacy of individuals.</p>
+		</div>
+		<p class="mb-0 opacity-50 small" style="font-size: .7em;">© BoostVibe Research 2024. All Rights Reserved.</p>
+	</div>
+</footer>
+
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="assets/main/bootstrap/bootstrap.bundle.min.js"></script>
+	<!-- END Bootstrap -->
+
+<!--
+	<script type="text/javascript">
+		setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 10000); // temporização da Call to Action (em milissegundos)
+	  </script> -->
+
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+
+
+<!-- ========================= JAVASCRIP ========================= -->
+<script>
+	/* ============ RANDOM NAME E BOTTLES ============ */
+
+	/* VARIAVEL QUE CONTROLA O TEMPO */
+
+	const timeBuy = 20000; // muda aqui o tempo 1 segundo é 1000 millisegundo
+	const timeShowModal = timeBuy - 2000;
+
+	var stockNumber = 250;
+	const cNames = ['Michael', 'James', 'John', 'Robert', 'David', 'William', 'Christopher', 'Joseph', 'Richard', 'Daniel'];
+	const cLocals = ['California', 'Ohio', 'Pennsylvania', 'Michigan', 'Illinois', 'North Carolina', 'Georgia', 'Florida', 'Texas'];
+	const tBottles = [3, 6, 6];
+
+	function bottlesBuying() {
+	  const randName = cNames[Math.floor(Math.random() * cNames.length)];
+	  const randLocal = cLocals[Math.floor(Math.random() * cLocals.length)];
+	  const randBottle = tBottles[Math.floor(Math.random() * tBottles.length)];
+
+	  stockNumber -= randBottle;
+
+	  const oneBottle = document.querySelector('#one-bottle');
+	  const threeBottles = document.querySelector('#three-bottles');
+	  const sixBottles = document.querySelector('#six-bottles');
+
+	  if ( randBottle == 3 ) {
+		oneBottle.style.display = 'none';
+		threeBottles.style.display = 'block';
+		sixBottles.style.display = 'none';
+		document.querySelector('#items-purchased').innerHTML = randBottle + ' bottles';
+	  } else if ( randBottle == 6 ) {
+		oneBottle.style.display = 'none';
+		threeBottles.style.display = 'none';
+		sixBottles.style.display = 'block';
+		document.querySelector('#items-purchased').innerHTML = randBottle + ' bottles';
+	  } else {
+		oneBottle.style.display = 'block';
+		threeBottles.style.display = 'none';
+		sixBottles.style.display = 'none';
+		document.querySelector('#items-purchased').innerHTML = randBottle + ' bottle';
+	  }
+
+	  document.querySelector('#customer-name').innerHTML = randName;
+	  document.querySelector('#customer-location').innerHTML = randLocal;
+	  document.querySelector('#items-purchased').innerHTML = randBottle + (randBottle > 1 ? ' bottles' : ' bottle');
+
+	  document.querySelector('.count-bottle').innerHTML = stockNumber;
+
+	  document.querySelector('.modal-right').style.right = '20px';
+	  setTimeout(function() {
+		document.querySelector('.modal-right').style.right = '-800px';
+	  }, timeShowModal);
+
+	  if (stockNumber < 25) clearInterval(buyTimer);
+	}
+
+	var buyTimer = setInterval(bottlesBuying, timeBuy);
+	/* ============ RANDOM NAME E BOTTLES ============ */
+	/* ============ DROP DRAW ============ */
+	function toggleVisibility(event) {
+	  const paragraphs = document.querySelectorAll('.toggle-paragraph');
+	  const icons = document.querySelectorAll('.toggle-icon');
+	  const targetParagraph = event.currentTarget.nextElementSibling;
+	  const targetIcon = event.currentTarget.querySelector('.toggle-icon');
+	  const isVisible = !targetParagraph.classList.contains('hidden');
+
+	  paragraphs.forEach(p => p.classList.add('hidden'));
+	  icons.forEach(icon => {
+		icon.classList.remove('bi-chevron-up');
+		icon.classList.add('bi-chevron-down');
+	  });
+
+	  if (!isVisible) {
+		targetParagraph.classList.remove('hidden');
+		targetIcon.classList.remove('bi-chevron-down');
+		targetIcon.classList.add('bi-chevron-up');
+	  }
+	}
+	/* ============ DROP DRAW ============ */
+	/* ============ CRONOMETRO ============ */
+	document.addEventListener('DOMContentLoaded', () => {
+	  const timerElement = document.querySelector('.timer-count');
+	  const timerElement2 = document.querySelector('.timer-count2');
+
+	  if (!timerElement || !timerElement2) {
+		return;
+	  }
+
+	  let time = 39 * 60; //MUDAR AQUI O TEMPO MUDA APENAS O 39 E NÃO TIRAR O * 60 SE FOR MUDAR O TEMPO APENAS O 39 MUDAR 
+
+	  function updateTimer() {
+		const minutes = Math.floor(time / 60);
+		const seconds = time % 60;
+		timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+		timerElement2.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+		if (time > 0) {
+			time--;
+		} else {
+		  clearInterval(timerInterval);
+		}
+	  }
+
+	  const timerInterval = setInterval(updateTimer, 1000);
+	  updateTimer();
+	});
+	/* ============ CRONOMETRO ============ */
+  </script>
+  <!-- ========================= JAVASCRIP ========================= -->
+
+</body>
+</html>
